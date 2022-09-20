@@ -36,7 +36,7 @@
 			"response": []
 		},
 		{
-			"name": "Failure Request",
+			"name": "Error Register User",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -60,6 +60,21 @@
 						"api",
 						"users"
 					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Connection Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
 				}
 			},
 			"response": []
