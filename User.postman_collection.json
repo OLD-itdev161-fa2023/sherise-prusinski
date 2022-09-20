@@ -36,7 +36,7 @@
 			"response": []
 		},
 		{
-			"name": "Error Register User",
+			"name": "Password Error Register User",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -49,6 +49,64 @@
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"name\": \"Sherise Prusinski\",\r\n    \"email\" : \"prusinsa@gmatc.matc.edu\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Name Password Error Register User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"prusinsa@gmatc.matc.edu\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Name Email Password Error Register User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}"
 				},
 				"url": {
 					"raw": "localhost:3000/api/users",
