@@ -10,7 +10,9 @@ class App extends React.Component {
   componentDidMount() {
     axios.get('http://localhost:5000')
       .then ( (response) => {
-        data: response.data
+        this.setState ({
+          data: response.data
+        })
       })
       .catch((error) => {
         console.error(`Error fetching data: ${error}`);
