@@ -4,7 +4,7 @@ import { check, validationResult } from 'express-validator';
 import cors from 'cors';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import user from './models/user';
+import config from 'config';
 import User from './models/user';
 
 //Initialize express application
@@ -74,6 +74,8 @@ app.post(
                 //Save to the db and return
                 await user.save();
 
+                console.log("User info saved in database");
+
                 //Generate and return a JWT token
                 const payload = {
                     user: {
@@ -92,7 +94,7 @@ app.post(
                 );
 
             } catch (error) {
-                res.status(500).send('Server error');
+                res.status(500).send('Server error : ' + error);
             }
         }
     }
