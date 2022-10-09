@@ -187,7 +187,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"She Pru 4\",\r\n    \"email\" : \"shepru4@gmail.com\",\r\n    \"password\" : \"shepru4123\"\r\n}"
+							"raw": "{\r\n    \"name\": \"She Pru\",\r\n    \"email\" : \"shepru@gmail.com\",\r\n    \"password\" : \"shepru123\"\r\n}"
 						},
 						"url": {
 							"raw": "localhost:5000/api/users",
