@@ -9,8 +9,8 @@ class App extends React.Component {
 
   componentDidMount() {
     axios.get('http://localhost:5000')
-      .then ( (response) => {
-        this.setState ({
+      .then((response) => {
+        this.setState({
           data: response.data
         })
       })
@@ -23,7 +23,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-        GoodThings
+          GoodThings {this.state.data}
         </header>
       </div>
     );
