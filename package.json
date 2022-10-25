@@ -30,6 +30,7 @@
     "jshint": "^2.13.5",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.6.1",
+    "react-router-dom": "^5.3.0",
     "yarn": "^1.22.19"
   },
   "devDependencies": {
