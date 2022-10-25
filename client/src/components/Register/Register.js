@@ -1,7 +1,8 @@
 import React, { userState } from 'react';
 import axios from 'axios';
 
-const Register = () => {
+const Register = (() => {
+
     const [userData, setUserData] = userState({
         name: '',
         email: '',
@@ -11,15 +12,15 @@ const Register = () => {
 
     const { name, email, password, passwordConfirm } = userData;
 
-    const onChange = e => {
+    const onChange = (e => {
         const { name, value } = e.target;
         setUserData({
             ...userData,
             [name]: value
         })
-    }
+    });
 
-    const register = async () => {
+    const register = (async () => {
         if (password !== passwordConfirm) {
             console.log('Passwords do not match!');
         }
@@ -33,7 +34,7 @@ const Register = () => {
             try {
                 const config = {
                     headers: {
-                        'Conent-Type': 'application/json'
+                        'Content-Type': 'application/json'
                     }
                 }
 
@@ -46,7 +47,7 @@ const Register = () => {
                 return;
             }
         }
-    }
+    });
 
     return (
         <div>
@@ -91,7 +92,7 @@ const Register = () => {
                 <button onClick={() => register()}>Register</button>
             </div>
         </div>
-    )
-}
+    );
+});
 
-export default Register
+export default Register;
