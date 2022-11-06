@@ -103,13 +103,13 @@ app.get('/api/auth', auth, async (req, res) => {
  */
 
 app.post(
-    'api/login',
+    '/api/login',
     [
         check('email', 'Please enter a valid email').isEmail(),
         check('password', 'A password is required').exists()
     ],
     async (req, res) => {
-        const errors = validatationResult(req);
+        const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(422).json({ errors: errors.array() });
         } else {
@@ -120,7 +120,7 @@ app.post(
                 if (!user) {
                     return res
                         .status(400)
-                        .json({ errors: [{ msg: 'Invalid email or password' }] });
+                        .json({ errors: [{ msg: 'Invalid email' }] });
                 }
 
                 //Check password
@@ -128,12 +128,12 @@ app.post(
                 if (!match) {
                     return res
                         .status(400)
-                        .jason({ errors: [{ msg: 'Invalida email or password' }] });
+                        .json({ errors: [{ msg: 'Invalid password' }] });
                 }
 
                 returnToken(user, res);
             } catch (error) {
-                res.status(500).send('Server error');
+                res.status(500).send('Server error : ' + error);
             }
         }
     }
