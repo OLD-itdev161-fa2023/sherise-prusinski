@@ -24,7 +24,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\" : \"Test the Create Post Endpoint in Postman\",\n    \"body\" : \"In Postman, Create a new collection named Post. Use the Login User query to login a user, then copy the token from the response body.\"\n}"
+					"raw": "{\n    \"title\" : \"Test the Create Post Endpoint in Postman : post 3\",\n    \"body\" : \"In Postman, Create a new collection named Post. Use the Login User query to login a user, then copy the token from the response body.\"\n}"
 				},
 				"url": {
 					"raw": "localhost:5000/api/posts",
@@ -101,7 +101,7 @@
 					"raw": "{\n    \"email\" : \"prusinsa@gmatc.matc.edu\",\n    \"password\" : \"sherise123\"\n}"
 				},
 				"url": {
-					"raw": "localhost:5000/api/posts/63681fee11a8524b9c91d1cc",
+					"raw": "localhost:5000/api/posts/63682b8bed2beb803b63ae3f",
 					"host": [
 						"localhost"
 					],
@@ -109,7 +109,7 @@
 					"path": [
 						"api",
 						"posts",
-						"63681fee11a8524b9c91d1cc"
+						"63682b8bed2beb803b63ae3f"
 					]
 				}
 			},
@@ -136,7 +136,7 @@
 					"raw": "{\n    \"email\" : \"prusinsa@gmatc.matc.edu\",\n    \"password\" : \"sherise123\"\n}"
 				},
 				"url": {
-					"raw": "localhost:5000/api/posts/63681fee11a8524b9c91d1cc",
+					"raw": "localhost:5000/api/posts/63682b8bed2beb803b63ae3f",
 					"host": [
 						"localhost"
 					],
@@ -144,7 +144,7 @@
 					"path": [
 						"api",
 						"posts",
-						"63681fee11a8524b9c91d1cc"
+						"63682b8bed2beb803b63ae3f"
 					]
 				}
 			},
@@ -171,7 +171,7 @@
 					"raw": "{\n    \"title\" : \"[Updated]Test the Create Post Endpoint in Postman\",\n    \"body\" : \"In Postman, Create a new collection named Post. Use the Login User query to login a user, then copy the token from the response body.\"\n}"
 				},
 				"url": {
-					"raw": "localhost:5000/api/posts/636829e0f34b629e59218290",
+					"raw": "localhost:5000/api/posts/63682b8bed2beb803b63ae3f",
 					"host": [
 						"localhost"
 					],
@@ -179,7 +179,7 @@
 					"path": [
 						"api",
 						"posts",
-						"636829e0f34b629e59218290"
+						"63682b8bed2beb803b63ae3f"
 					]
 				}
 			},

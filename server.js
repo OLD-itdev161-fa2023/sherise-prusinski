@@ -115,7 +115,7 @@ app.get('/api/posts', auth, async (req, res) => {
 
 /**
  * @route GET api/post/:id
- * @desc Get post
+ * @desc Get posts by id
  */
 app.get('/api/posts/:id', auth, async (req, res) => {
     try {
