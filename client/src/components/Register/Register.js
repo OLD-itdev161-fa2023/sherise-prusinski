@@ -1,9 +1,9 @@
-import React, { userState } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
 const Register = (() => {
 
-    const [userData, setUserData] = userState({
+    const [userData, setUserData] = useState({
         name: '',
         email: '',
         password: '',
