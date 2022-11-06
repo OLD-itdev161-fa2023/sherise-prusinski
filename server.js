@@ -117,7 +117,7 @@ app.get('/api/posts', auth, async (req, res) => {
  * @route GET api/post/:id
  * @desc Get post
  */
-app.get('/api/post:id', auth, async (req, res) => {
+app.get('/api/post/:id', auth, async (req, res) => {
     try {
         const post = await Post.findById(req.params.id);
 

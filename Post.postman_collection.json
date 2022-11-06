@@ -76,6 +76,44 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Get Post",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjM2N2I2NTY3YzUxYTE2MWM5M2YzZDUzIn0sImlhdCI6MTY2Nzc2NzcwNSwiZXhwIjoxNjY3ODAzNzA1fQ.NQcbEBBtRq06mtOGIpySkhNoUY_5RSawoKf7N2XFbGQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"prusinsa@gmatc.matc.edu\",\n    \"password\" : \"sherise123\"\n}"
+				},
+				"url": {
+					"raw": "localhost:5000/api/post/63681fee11a8524b9c91d1cc",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"post",
+						"63681fee11a8524b9c91d1cc"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
