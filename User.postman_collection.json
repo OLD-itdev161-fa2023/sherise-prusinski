@@ -202,6 +202,31 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Authorize User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjM2N2I2NTY3YzUxYTE2MWM5M2YzZDUzIn0sImlhdCI6MTY2Nzc0MTI3MCwiZXhwIjoxNjY3Nzc3MjcwfQ.L44UZ7JXW_Y97Uh-RsBTvkmlboEYwkiGfGpAeW92Zfk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/api/auth",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
