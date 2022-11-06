@@ -101,15 +101,85 @@
 					"raw": "{\n    \"email\" : \"prusinsa@gmatc.matc.edu\",\n    \"password\" : \"sherise123\"\n}"
 				},
 				"url": {
-					"raw": "localhost:5000/api/post/63681fee11a8524b9c91d1cc",
+					"raw": "localhost:5000/api/posts/63681fee11a8524b9c91d1cc",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
 						"api",
-						"post",
+						"posts",
 						"63681fee11a8524b9c91d1cc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Post",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjM2N2I2NTY3YzUxYTE2MWM5M2YzZDUzIn0sImlhdCI6MTY2Nzc2NzcwNSwiZXhwIjoxNjY3ODAzNzA1fQ.NQcbEBBtRq06mtOGIpySkhNoUY_5RSawoKf7N2XFbGQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"prusinsa@gmatc.matc.edu\",\n    \"password\" : \"sherise123\"\n}"
+				},
+				"url": {
+					"raw": "localhost:5000/api/posts/63681fee11a8524b9c91d1cc",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts",
+						"63681fee11a8524b9c91d1cc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Post",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjM2N2I2NTY3YzUxYTE2MWM5M2YzZDUzIn0sImlhdCI6MTY2Nzc2NzcwNSwiZXhwIjoxNjY3ODAzNzA1fQ.NQcbEBBtRq06mtOGIpySkhNoUY_5RSawoKf7N2XFbGQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\" : \"[Updated]Test the Create Post Endpoint in Postman\",\n    \"body\" : \"In Postman, Create a new collection named Post. Use the Login User query to login a user, then copy the token from the response body.\"\n}"
+				},
+				"url": {
+					"raw": "localhost:5000/api/posts/636829e0f34b629e59218290",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts",
+						"636829e0f34b629e59218290"
 					]
 				}
 			},

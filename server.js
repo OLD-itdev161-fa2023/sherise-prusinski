@@ -164,6 +164,7 @@ app.delete('/api/posts/:id', auth, async (req, res) => {
 */
 app.put('/api/posts/:id', auth, async (req, res) => {
     try {
+        const { title, body } = req.body;
         const post = await Post.findById(req.params.id);
 
         // Make sure the post was found
