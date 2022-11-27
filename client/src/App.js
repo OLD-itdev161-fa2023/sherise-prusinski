@@ -201,6 +201,7 @@ class App extends React.Component {
                   <React.Fragment>Please Register or Login</React.Fragment>
                 )}
               </Route>
+
               <Route path="/posts/:postId" >
                 <Post post={post} />
               </Route>
@@ -214,6 +215,7 @@ class App extends React.Component {
                   onPostUpdated={this.onPostUpdated}
                 />
               </Route>
+
               <Route
                 exact
                 path="/register"
