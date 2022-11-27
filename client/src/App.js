@@ -7,6 +7,7 @@ import Register from './components/Register/Register';
 import Login from './components/Login/Login';
 import PostList from './components/PostList/PostList';
 import Post from './components/Post/Post';
+
 class App extends React.Component {
   state = {
     posts: [],
@@ -137,6 +138,9 @@ class App extends React.Component {
                 ) : (
                   <React.Fragment>Please Register or Login</React.Fragment>
                 )}
+              </Route>
+              <Route path="/posts/:postId" >
+                <Post post={post} />
               </Route>
               <Route
                 exact
