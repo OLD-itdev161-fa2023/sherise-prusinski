@@ -3,12 +3,14 @@ import './App.css';
 import axios from 'axios';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
-import Register from './components/Register/Register'
-import Login from './components/Login/Login'
-
+import Register from './components/Register/Register';
+import Login from './components/Login/Login';
+import PostList from './components/PostList/PostList';
+import Post from './components/Post/Post';
 class App extends React.Component {
   state = {
     posts: [],
+    post: null,
     token: null,
     user: null
   }
@@ -85,6 +87,13 @@ class App extends React.Component {
     }
   }
 
+  viewPost = post => {
+    console.log(`view ${post.title}`);
+    this.setState({
+      post: post
+    });
+  };
+
   logOut = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
@@ -92,7 +101,7 @@ class App extends React.Component {
   }
 
   render() {
-    let { user, posts } = this.state;
+    let { user, posts, post } = this.state;
     const authProps = {
       authenticateUser: this.authenticateUser
     };
@@ -118,33 +127,27 @@ class App extends React.Component {
             </ul>
           </header>
           <main>
-            <Route exact path="/">
-              {
-                user ? (
+            <Switch>
+              <Route exact path="/">
+                {user ? (
                   <React.Fragment>
                     <div>Hello {user}!</div>
-                    <div>
-                      {posts.map(post => (
-                        <div key={post._id}>
-                          <h1>{post.title}</h1>
-                          <p>{post.body}</p>
-                        </div>
-                      ))}
-                    </div>
+                    <PostList posts={posts} clickPost={this.viewPost} />
                   </React.Fragment>
                 ) : (
-                  <React.Fragment>
-                    Please Register or Login
-                  </React.Fragment>
+                  <React.Fragment>Please Register or Login</React.Fragment>
                 )}
-            </Route>
-            <Switch>
+              </Route>
               <Route
-                exact path="/register"
-                render={() => <Register {...authProps} />} />
+                exact
+                path="/register"
+                render={() => <Register {...authProps} />}
+              />
               <Route
-                exact path="/login"
-                render={() => <Login {...authProps} />} />
+                exact
+                path="/login"
+                render={() => <Login {...authProps} />}
+              />
             </Switch>
           </main>
         </div>
