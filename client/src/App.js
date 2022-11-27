@@ -95,6 +95,30 @@ class App extends React.Component {
     });
   };
 
+  deletePost = post => {
+    const { token } = this.state;
+
+    if (token) {
+      const config = {
+        headers: {
+          'x-auth-token': token
+        }
+      };
+
+      axios
+        .delete(`http://localhost:5000/api/posts/${post._id}`, config)
+        .then(response => {
+          const newPosts = this.state.posts.filter(p => p.id !== post._id);
+          this.setState({
+            posts: [...newPosts]
+          });
+        })
+        .catch(error => {
+          console.error(`Error deleting oist : ${error}`);
+        });
+    }
+  };
+
   logOut = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
@@ -133,7 +157,11 @@ class App extends React.Component {
                 {user ? (
                   <React.Fragment>
                     <div>Hello {user}!</div>
-                    <PostList posts={posts} clickPost={this.viewPost} />
+                    <PostList
+                      posts={posts}
+                      clickPost={this.viewPost}
+                      deletePost={this.deletePost}
+                    />
                   </React.Fragment>
                 ) : (
                   <React.Fragment>Please Register or Login</React.Fragment>
