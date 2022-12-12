@@ -116,7 +116,7 @@ class App extends React.Component {
           });
         })
         .catch(error => {
-          console.error(`Error deleting oist : ${error}`);
+          console.error(`Error deleting list : ${error}`);
         });
     }
   };
